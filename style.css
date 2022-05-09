@@ -8,9 +8,10 @@ html, body {
   width: 66px;
   padding: 20px;
   margin: 0 3px;
-  border: 2px solid black;
+  border: 2px solid rgb(111, 82, 207);
   border-radius: 9px;
   cursor: pointer;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
 .row{
