@@ -27,12 +27,12 @@ body,html{
     text-transform: uppercase;
 
 }
-.content h1{
+.content h2{
     color: #fff;
     font-size: 60px;
     letter-spacing: 15px;
 }
-.content h1 span{
+.content h2 span{
     color: #fff;
 }
 .content a{
