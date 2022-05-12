@@ -15,8 +15,25 @@
     font-size: 18px;
     border-radius: 20px;
 }
+.content-2 a{
+    background: #85c1ee;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
 .content a:hover{
     background: #034e88;
     color: #fff;
+}
+.content-2 a:hover{
+    background: #034e88;
+    color: #fff;
+}
+.content-2{
+   position:relative; left:5px; top:10px;
+}
+.content {
+   position:relative; left:1080px; top:2px;
 }
     
