@@ -1,22 +1,22 @@
-
-.button{
-  width: 66px;
-  padding: 20px;
-  margin: 0 3px;
-  border: 2px solid rgb(111, 82, 207);
-  border-radius: 9px;
-  cursor: pointer;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+.section-1{
+    width: 1280px 1920px;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
 }
-
-.row{
-  margin: 8px 0;
+.content a{
+    background: #85c1ee;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
 }
-.row input{
-  width:290px;
-  margin: 0;
-  padding: 10px ;
-  border: 2px solid black;
-  border-radius: 5px;
-  font-size: 18px;
+.content a:hover{
+    background: #034e88;
+    color: #fff;
 }
+    
