@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Vedas- by Shiwang Pandey</title>
+    <link href="style1.css" rel="stylesheet" type="text/css" />
+
+    <link rel="icon" href="/img/Calculator_30001.icon" />
+  </head>
+  <body>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Insertion</h1>
+      
+        #include &lt;stdio.h&gt;
+        void display(int arr[], int n)
+        {
+          for (int i = 0; i < n; i++)
+            {
+                printf("%d ", arr[i]);
+            }
+            printf("\n");
+        }
+        
+        int indInsertion(int arr[], int size, int element, int capacity, int Index)
+        {
+            if (size >= capacity)
+            {
+                return -1;
+            }
+            for (int i = size - 1; i >= Index; i--)
+            {
+                arr[i + 1] = arr[i];
+            }
+            arr[Index] = element;
+            return 1;
+        }
+        int main()
+        {
+            int arr[100] = {1, 2, 3, 4, 95};
+            int size = 5;
+            int element = 45;
+            int Index = 3;
+            display(arr, size);
+            indInsertion(arr, size, element,100, Index);
+            size += 1;
+            display(arr, size);
+            return 0;
+        }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Deletion</h1>
+      
+      #include &lt;stdio.h&gt;
+        void display(int arr[], int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                printf("%d ", arr[i]);
+            }
+            printf("\n");
+        }
+        
+        int indInsertion(int arr[], int size, int Index)
+        {
+        
+            for (int i = Index; i < size - 1; i++)
+            {
+                arr[i] = arr[i + 1];
+            }
+        }
+        int main()
+        {
+            int arr[100] = {1, 2, 3, 4, 95};
+            int size = 5;
+            int element = 45;
+            int Index = 3;
+            display(arr, size);
+            indInsertion(arr, size, Index);
+            size -= 1;
+            display(arr, size);
+            return 0;
+        }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Function Call by value</h1>
+      
+      #include &lt;stdio.h&gt;
+      
+      void Call_By_Value(int num1)
+      {
+      num1=42;
+      printf("nInside Function, Number is %d", num1);
+      }
+
+      int main()
+      {
+      int num;
+      num=24;
+      printf("nBefore Function, Number is %d", num);
+
+      Call_By_Value(num);
+
+      printf("nAfter Function, Number is %dn", num);
+
+      return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Function call by reference</h1>
+      #include &lt;stdio.h&gt;
+      // function definition
+
+      void Call_By_Reference(int *num1)
+
+      {
+      *num1=42;
+      printf("\nInside Function, Number is %d", *num1);
+      }
+
+      // Main Function
+
+      int main()
+      {
+      int num;
+      num=24;
+      printf("\nBefore Function, Number is %d", num);
+
+      Call_By_Reference(&num);
+
+      printf("\nAfter Function, Number is %d", num);
+
+      return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Recursive Function: Factoial</h1>
+      #include &lt;stdio.h&gt;
+
+        int factorial(int number)
+        {
+            if (number == 1 || number == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return (number * factorial(number - 1));
+            }
+        }
+        int main()
+        {
+            int num;
+            printf("Enter the number you want the factorial of\n");
+            scanf("%d", &num);
+            printf("The factorial of %d is %d\n", num, factorial(num));
+        
+            return 0;
+        }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Pointers</h1>
+      #include &lt;stdio.h&gt;
+        int main()
+        {
+            int var =10;
+            int *p;
+            p= &var;
+        
+            printf ( "Address of var is: %p", &var);
+        
+            printf ( "\nAddress of var is: %p", p);
+        
+            printf ( "\nValue of var is: %d", var);
+        
+            printf ( "\nValue of var is: %d", *p);
+        
+            printf ( "\nValue of var is: %d", *( &var));
+        
+            printf( "\nValue of pointer p is: %p", p);
+        
+            printf ( "\nAddress of pointer p is: %p", &p);
+        
+            return 0;
+        }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#2d array addition of 2 matrices</h1>
+      #include &lt;stdio.h&gt;
+      int main() {
+        int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+        printf("Enter the number of rows (between 1 and 100): ");
+        scanf("%d", &r);
+        printf("Enter the number of columns (between 1 and 100): ");
+        scanf("%d", &c);
+      
+        printf("\nEnter elements of 1st matrix:\n");
+        for (i = 0; i < r; ++i)
+          for (j = 0; j < c; ++j) {
+            printf("Enter element a%d%d: ", i + 1, j + 1);
+            scanf("%d", &a[i][j]);
+          }
+      
+        printf("Enter elements of 2nd matrix:\n");
+        for (i = 0; i < r; ++i)
+          for (j = 0; j < c; ++j) {
+            printf("Enter element b%d%d: ", i + 1, j + 1);
+            scanf("%d", &b[i][j]);
+          }
+      
+        // adding two matrices
+        for (i = 0; i < r; ++i)
+          for (j = 0; j < c; ++j) {
+            sum[i][j] = a[i][j] + b[i][j];
+          }
+      
+        // printing the result
+        printf("\nSum of two matrices: \n");
+        for (i = 0; i < r; ++i)
+          for (j = 0; j < c; ++j) {
+            printf("%d   ", sum[i][j]);
+            if (j == c - 1) {
+              printf("\n\n");
+            }
+          }
+      
+        return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Binary Search C program</h1>
+      #include &lt;stdio.h&gt;
+      int main()
+      {
+          int i, low, high, mid, n, key, array[100];
+          printf("Enter number of elements \n");
+          scanf("%d", &n);
+          printf("Enter %d integers\n", n);
+          for (i = 0; i < n; i++)
+              scanf("%d", &array[i]);
+          printf("Enter value to find\n");
+          scanf("%d", &key);
+          low = 0;
+          high = n - 1;
+          mid = (low + high) / 2;
+          while (low <= high)
+          {
+              if (array[mid] < key)
+                  low = mid + 1;
+              else if (array[mid] == key)
+              {
+                  printf("%d found at location %d.\n", key, mid + 1);
+                  break;
+              }
+              else
+                  high = mid - 1;
+              mid = (low + high) / 2;
+          }
+          if (low > high)
+              printf("Not found! %d isn't present in the list.\n", key);
+          return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Linear search C program</h1>
+      #include &lt;stdio.h&gt;
+        int main()
+        {
+          int array[100], search, c, n;
+        
+          printf("Enter number of elements in array\n");
+          scanf("%d", &n);
+        
+          printf("Enter %d integer(s)\n", n);
+        
+          for (c = 0; c < n; c++)
+            scanf("%d", &array[c]);
+        
+          printf("Enter a number to search\n");
+          scanf("%d", &search);
+        
+          for (c = 0; c < n; c++)
+          {
+            if (array[c] == search)    /* If required element is found */
+            {
+              printf("%d is present at location %d.\n", search, c+1);
+              break;
+            }
+          }
+          if (c == n)
+            printf("%d isn't present in the array.\n", search);
+        
+          return 0;
+        }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Insertion Sort C program</h1>
+      #include &lt;stdio.h&gt;
+      int main()
+      {
+          int n, i, j, temp;
+          int arr[64];
+      
+          printf("Enter number of elements\n");
+          scanf("%d", &n);
+      
+          printf("Enter %d integers\n", n);
+          for (i = 0; i < n; i++)
+          {
+              scanf("%d", &arr[i]);
+          }
+          for (i = 1 ; i <= n - 1; i++)
+          {
+            j = i;
+                  while ( j > 0 && arr[j-1] > arr[j])
+                  {	        
+                      temp     = arr[j];
+                      arr[j]   = arr[j-1];
+                      arr[j-1] = temp;
+                      j--;
+                  }
+          }
+          printf("Sorted list in ascending order:\n");
+          for (i = 0; i <= n - 1; i++)
+          {
+              printf("%d\n", arr[i]);
+          }
+          return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Selection Sort C program</h1>
+      #include &lt;stdio.h&gt;
+        int main()
+        {
+        int a[100], n, i, j, position, swap;
+        printf("Enter number of elements\n");
+        scanf("%d", &n);
+        printf("Enter %d Numbers\n", n);
+        for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+        for(i = 0; i < n - 1; i++)
+        {
+        position=i;
+        for(j = i + 1; j < n; j++)
+        {
+        if(a[position] > a[j])
+        position=j;
+        }
+        if(position != i)
+        {
+        swap=a[i];
+        a[i]=a[position];
+        a[position]=swap;
+        }
+        }
+        printf("Sorted Array:\n");
+        for(i = 0; i < n; i++)
+        printf("%d\n", a[i]);
+        return 0;
+        }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Bubble Sort C program</h1>
+      #include &lt;stdio.h&gt;
+      int main()
+      {
+      
+          int arr[50], num, x, y, temp;
+      
+          printf("Please Enter the Number of Elements you want in the array: ");
+      
+          scanf("%d", &num);
+      
+          printf("Please Enter the Value of Elements: ");
+      
+          for (x = 0; x < num; x++)
+      
+              scanf("%d", &arr[x]);
+      
+          for (x = 0; x < num - 1; x++)
+          {
+      
+              for (y = 0; y < num - x - 1; y++)
+              {
+      
+                  if (arr[y] > arr[y + 1])
+                  {
+      
+                      temp = arr[y];
+      
+                      arr[y] = arr[y + 1];
+      
+                      arr[y + 1] = temp;
+                  }
+              }
+          }
+      
+          printf("Array after implementing bubble sort: ");
+      
+          for (x = 0; x < num; x++)
+          {
+      
+              printf("%d ", arr[x]);
+          }
+      
+          return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#For loop</h1>
+      #include &lt;stdio.h&gt;
+      // Print numbers from 1 to 10
+      int main() {
+        int i;
+
+        for (i = 1; i < 11; ++i)
+        {
+          printf("%d ", i);
+        }
+        return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#while loop</h1>
+      #include &lt;stdio.h&gt;
+      int main()
+      {
+          int i = 1;
+          while (i <= 10)
+          {
+              printf("%d\n", i);
+              i++;
+          }
+
+          return 0;
+      }
+        </pre
+      ></span>
+    <span><div id="text" class="content">
+      <pre>
+      <h1>#Do-While loop</h1>
+      #include &lt;stdio.h&gt;
+      int main()
+      {
+
+          /* local variable definition */
+          int a = 1;
+
+          /* do loop execution */
+          do
+          {
+              printf("%d\n", a);
+              a = a + 1;
+          } while (a <= 10);
+
+          return 0;
+      }
+        </pre
+      ></span>
+     
+      <button onclick="copyToClipBoard()"> Copy </button>
+      
+    
+    <script src="script.js"></script>
+  </body>
+</html>
